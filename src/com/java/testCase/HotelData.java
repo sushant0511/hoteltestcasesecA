@@ -2,19 +2,26 @@ package com.java.testCase;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class HotelData {
 
 	public List<Hotel> storeAllHotels()
 	{
-		Hotel h1=new Hotel(1, "Crown", "L1", 8000);
-		Hotel h2=new Hotel(2, "Sarovar", "L1", 9000);
-		Hotel h3=new Hotel(3, "LemonTree", "L1", 13000);
-		
 		List<Hotel> hotels=new ArrayList<Hotel>();
-		hotels.add(h1);
-		hotels.add(h2);
-		hotels.add(h3);
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("How many hotels");
+		int count=scanner.nextInt();
+		System.out.println("ENter Name,rooms, price");
+		for(int i=0;i<count;i++)
+		{
+		Hotel hotel=new Hotel(i+1, scanner.next(), scanner.next(), scanner.nextInt());
+		hotels.add(hotel);
+		}
+		
+		
+		
+		
 		return hotels;
 		
 	}
