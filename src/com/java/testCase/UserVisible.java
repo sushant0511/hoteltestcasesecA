@@ -15,7 +15,7 @@ public class UserVisible {
 		
 		for(Hotel h:list)
 		{
-			System.out.println(h.getName()+" "+h.getPrice());
+			System.out.println(h.getName()+" "+h.getPrice()+" "+h.getRoom());
 		}
 		return list;
 	}
